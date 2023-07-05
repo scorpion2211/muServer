@@ -1,0 +1,32 @@
+<div class="navbar">
+  <section class="navbar__logo">mi logo</section>
+  <section class="navbar-links">
+    <a class="navbar-links__link">Descargas</a>
+    <a class="navbar-links__link">Tienda</a>
+    <a class="navbar-links__link">Ranking</a>
+    <a class="navbar-links__link">Foro</a>
+    <a class="navbar-links__link">Noticias</a>
+  </section>
+  <section class="navbar-actions">
+    <a class="navbar-actions__link" (click)="showModal(false)">
+      <ion-icon name="person"></ion-icon> Registrarme
+    </a>
+    <a class="navbar-actions__link" (click)="showModal()">
+      <ion-icon name="walk"></ion-icon> Ingresar
+    </a>
+  </section>
+</div>
+
+<app-modal-ia
+  [showModal]="showModalLogin"
+  [template]="isLogin ? login : register"
+  [size]="sizeModal.SMALL"
+  (clickClose)="showModalLogin = false"
+></app-modal-ia>
+
+<ng-template #login>
+  <app-login></app-login>
+</ng-template>
+<ng-template #register>
+  <app-register></app-register>
+</ng-template>
