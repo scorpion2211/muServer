@@ -4,9 +4,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
-import { LoginPageModule } from './modals/login/login.module';
+import { LoginPageModule } from './login/login.module';
 import { ModalPageModule } from './modal/modal.module';
-import { RegisterPageModule } from './modals/register/register.module';
+import { RegisterPageModule } from './register/register.module';
 @NgModule({
   imports: [
     CommonModule,

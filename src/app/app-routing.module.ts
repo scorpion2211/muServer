@@ -20,14 +20,12 @@ const routes: Routes = [
   {
     path: 'login',
     loadChildren: () =>
-      import('./components/modals/login/login.module').then(
-        (m) => m.LoginPageModule
-      ),
+      import('./components/login/login.module').then((m) => m.LoginPageModule),
   },
   {
     path: 'register',
     loadChildren: () =>
-      import('./components/modals/register/register.module').then(
+      import('./components/register/register.module').then(
         (m) => m.RegisterPageModule
       ),
   },
